@@ -16,11 +16,10 @@ int main() {
 	string infix;
 	while (getline(inFile, infix)) {
 		InfixToPostfix item;
+		cout << "Infix: " << infix << ";" << endl;
+		// Postfix
 		item.Convert(infix);
-		string postfix = item.getPostfix();
-		cout << "Infix: " << infix << endl;
-		cout << "Postfix: " << postfix << endl;
-		cout << endl;
+		cout << "Postfix: " << item.getPostfix() << endl << endl;
 	}
 
 	inFile.close();
